@@ -8,23 +8,23 @@ namespace WindowsFormss
 {   
     class Triangle
     {
-        public double a;
-        public double b;
-        public double c;
-        public double h;
+        public double a;//объявляем переменную а
+        public double b;//объявляем переменную b
+        public double c;//объявляем переменную с
+        public double h;//объявляем высоту h
 
         public Triangle(double A, double B, double C)
         {
-            a = A;
-            b = B;
-            c = C;
-        
+            a = A; //а малекькая будет равна А большой , стороны треугольника
+            b = B;//b малекькая будет равна B большой , стороны треугольника
+            c = C;//c малекькая будет равна C большой , стороны треугольника
+
         }
         public Triangle(double A, double B, double C,double H)
         {
-            a = A;
-            b = B;
-            c = C;
+            a = A;//а малекькая будет равна А большой , стороны треугольника
+            b = B;//b малекькая будет равна B большой , стороны треугольника
+            c = C;//c малекькая будет равна C большой , стороны треугольника
             h = H;
 
         }
@@ -41,23 +41,23 @@ namespace WindowsFormss
             return Convert.ToString(c);
         }
 
-        public double Perimeter()
+        public double Perimeter()//создаем периметр
         {
-            double p = 0;
-            p = a + b + c;
-            return p;
+            double p = 0;//сначала приравниваем к 0
+            p = a + b + c;//периметр равен сумме всех сторон
+            return p;//возращаем периметр
         }
-        public double Visota()
+        public double Visota()//создаем высоту
         {
-            double h = 0;
-            h= a*b/ 2;
-            return h;
+            double h = 0;//высота равна 0
+            h= a*b/ 2;//чтобы найти высоту надо а умножить на b и делить на 2
+            return h;//возращаем h
         }
-        public double poluPerimetr()
+        public double poluPerimetr()//создаем полупериметр
         {
-            double m = 0;
-            m = a+b+c/2;
-            return m;
+            double m = 0;//полупериметр будет равен 0
+            m = (a+b+c)/2;//чтобы найти полупериметр надо все стороны сложить и разделить на 2 
+            return m;//возращаем m
         }
         public double vpisanajaOkruznost()
         {
@@ -70,7 +70,6 @@ namespace WindowsFormss
         public double opisanajaOkruznost()
         {
             double s = 0;
-            double p = 0;
             double q = 0;
             q = a * b * c / 4 * s;
             return q;
@@ -118,9 +117,9 @@ namespace WindowsFormss
             get
 
             {
-                if (a == b && a == c && b == c)
+                if (a == b && a == c && b == c)//если все true
                     return "равносторонний";
-                else if (a == b || a ==c || b == c)
+                else if (a == b || a ==c || b == c)//если какое то из значений true 
                     return "равнобедренный";
                 else return "разносторонний";
             }
